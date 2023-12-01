@@ -4,8 +4,9 @@ public class Departamento {
     private Funcionario chefe;
     private Empresa empresa;
 
-    public Departamento(String nome, Empresa empresa){
+    public Departamento(String nome,Funcionario chefe, Empresa empresa){
         this.nome = nome;
+        this.chefe = chefe;
         this.empresa = empresa;
     }
     public String getNome() {

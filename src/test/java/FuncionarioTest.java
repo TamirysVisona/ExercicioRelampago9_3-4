@@ -7,7 +7,7 @@ class FuncionarioTest {
     @Test
     void deveRetornarPais(){
         Funcionario funcionario = new Funcionario("Ana", new Escolaridade("Graduada"));
-        Departamento departamento = new Departamento("Financeiro", new Empresa("Empresa", new Grupo(new Pais("Brasil")), funcionario));
+        Departamento departamento = new Departamento("Financeiro", funcionario, new Empresa("Empresa", new Grupo(new Pais("Brasil")), funcionario));
         funcionario.setAlocacao(departamento);
 
         assertEquals("Brasil", funcionario.getAlocacao().getEmpresa().getGrupo().getSede().getNome());
