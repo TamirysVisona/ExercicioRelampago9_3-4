@@ -3,10 +3,10 @@ public class Empresa {
     private Grupo grupo;
     private Funcionario diretor;
 
-    public Empresa(String nome, Grupo grupo, Funcionario funcionario){
+    public Empresa(String nome, Grupo grupo, Funcionario diretor){
         this.nome = nome;
         this.grupo = grupo;
-        this.diretor = funcionario;
+        this.diretor = diretor;
     }
     public String getNome() {
         return this.nome;

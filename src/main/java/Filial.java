@@ -3,7 +3,7 @@ public class Filial {
     private Empresa empresa;
     private Cidade cidade;
 
-    public Filial(String nome, Cidade cidade){
+    public Filial(String nome, Empresa empresa, Cidade cidade){
         this.nome = nome;
         this.cidade = cidade;
     }
