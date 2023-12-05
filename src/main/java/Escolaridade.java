@@ -32,6 +32,7 @@ public class Escolaridade {
                 break;
             case 7:
                 this.nivelTecnico = "Técnico";
+                break;
             default:
                 throw new IllegalArgumentException("Valor inválido!");
         }
