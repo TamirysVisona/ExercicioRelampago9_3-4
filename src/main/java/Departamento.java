@@ -1,20 +1,11 @@
-public class Departamento {
-
-    private String nome;
+public class Departamento extends Dados {
     private Funcionario chefe;
     private Empresa empresa;
 
     public Departamento(String nome,Funcionario chefe, Empresa empresa){
-        this.nome = nome;
-        this.chefe = chefe;
-        this.empresa = empresa;
-    }
-    public String getNome() {
-        return this.nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
+        setNome(nome);
+        setEmpresa(empresa);
+        setChefe(chefe);
     }
 
     public Empresa getEmpresa() {

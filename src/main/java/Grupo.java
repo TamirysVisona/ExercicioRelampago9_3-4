@@ -1,10 +1,11 @@
-public class Grupo {
-
+public class Grupo extends Dados {
     private Funcionario presidente;
     private Pais sede;
 
-    public Grupo(Pais sede){
-        this.sede = sede;
+    public Grupo(String nome, Funcionario presidente, Pais sede){
+        setNome(nome);
+        setPresidente(presidente);
+        setSede(sede);
     }
 
     public Funcionario getPresidente() {

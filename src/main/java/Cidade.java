@@ -1,18 +1,10 @@
 import java.lang.String;
-public class Cidade {
-    private String nome;
+public class Cidade extends Dados {
     private Estado estado;
 
     public Cidade(String nome, Estado estado){
-        this.nome = nome;
-        this.estado = estado;
-    }
-    public String getNome() {
-        return this.nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
+        setNome(nome);
+        setEstado(estado);
     }
 
     public Estado getEstado() {

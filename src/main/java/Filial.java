@@ -1,19 +1,11 @@
-public class Filial {
-    private String nome;
+public class Filial extends Dados {
     private Empresa empresa;
     private Cidade cidade;
 
     public Filial(String nome, Empresa empresa, Cidade cidade){
-        this.nome = nome;
-        this.cidade = cidade;
-    }
-
-    public String getNome() {
-        return this.nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
+        setNome(nome);
+        setEmpresa(empresa);
+        setCidade(cidade);
     }
 
     public Empresa getEmpresa() {

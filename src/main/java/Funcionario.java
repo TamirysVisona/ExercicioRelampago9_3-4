@@ -1,29 +1,20 @@
 import java.lang.String;
-public class Funcionario {
-
-    private String nome;
+public class Funcionario extends Dados {
     private Escolaridade escolaridade;
     private Departamento alocacao;
     private Filial coordenacao;
 
-    public Funcionario(String nome, Escolaridade escolaridade){
-        this.nome = nome;
-        this.escolaridade = escolaridade;
-    }
-    public String getNome() {
-        return this.nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
+    public Funcionario(String nome, Escolaridade nivel){
+        setNome(nome);
+        setEscolaridade(nivel);
     }
 
     public Escolaridade getEscolaridade() {
         return this.escolaridade;
     }
 
-    public void setEscolaridade(Escolaridade escolaridade) {
-        this.escolaridade = escolaridade;
+    public void setEscolaridade(Escolaridade nivel) {
+        this.escolaridade = nivel;
     }
 
     public Departamento getAlocacao() {
@@ -31,6 +22,9 @@ public class Funcionario {
     }
 
     public void setAlocacao(Departamento alocacao) {
+        if(alocacao == null){
+            throw new IllegalArgumentException("Alocacao invalida!");
+        }
         this.alocacao = alocacao;
     }
 

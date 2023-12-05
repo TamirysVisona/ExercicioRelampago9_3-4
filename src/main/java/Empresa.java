@@ -1,19 +1,11 @@
-public class Empresa {
-    private String nome;
+public class Empresa extends Dados {
     private Grupo grupo;
     private Funcionario diretor;
 
     public Empresa(String nome, Grupo grupo, Funcionario diretor){
-        this.nome = nome;
-        this.grupo = grupo;
-        this.diretor = diretor;
-    }
-    public String getNome() {
-        return this.nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
+        setNome(nome);
+        setGrupo(grupo);
+        setDiretor(diretor);
     }
 
     public Grupo getGrupo() {

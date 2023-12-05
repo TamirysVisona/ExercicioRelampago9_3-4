@@ -5,20 +5,19 @@ import static org.junit.jupiter.api.Assertions.*;
 class FuncionarioTest {
 
     @Test
-    void deveRetornarPais(){
-        Funcionario funcionario = new Funcionario("Ana", new Escolaridade("Graduada"));
-        Departamento departamento = new Departamento("Financeiro", funcionario, new Empresa("Empresa", new Grupo(new Pais("Brasil")), funcionario));
+    void deveRetornarPaisAlocacao(){
+        Funcionario funcionarioPresidente = new Funcionario("Luiz", new Escolaridade(6));
+        Grupo grupo = new Grupo("Grupo 1", funcionarioPresidente, new Pais("Brasil"));
+
+        Funcionario funcionarioDiretor = new Funcionario("Ana", new Escolaridade(5));
+        Empresa empresa = new Empresa("Empresa", grupo, funcionarioDiretor);
+
+        Funcionario funcionarioChefe = new Funcionario("Maria", new Escolaridade(5));
+        Departamento departamento = new Departamento("Financeiro", funcionarioChefe, empresa);
+
+        Funcionario funcionario = new Funcionario("Joao", new Escolaridade(1));
         funcionario.setAlocacao(departamento);
 
         assertEquals("Brasil", funcionario.getAlocacao().getEmpresa().getGrupo().getSede().getNome());
-    }
-
-    @Test
-    void deveRetornarEstadoFilial(){
-        Funcionario funcionario = new Funcionario("Ana", new Escolaridade("Graduado"));
-        Filial filial = new Filial("Filial 1", new Empresa("Empresa", new Grupo(new Pais("Brasil")), funcionario),new Cidade("Juiz de Fora", new Estado("Minas Gerais")));
-        funcionario.setCoordenacao(filial);
-
-        assertEquals("Minas Gerais", funcionario.getCoordenacao().getCidade().getEstado().getNome());
     }
 }

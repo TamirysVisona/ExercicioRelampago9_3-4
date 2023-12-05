@@ -1,16 +1,9 @@
 import java.lang.String;
-public class Estado {
-    private String nome;
+public class Estado extends Dados {
     private Pais pais;
 
-    public Estado (String nome){
-        this.nome = nome;
-    }
-    public String getNome() {
-        return this.nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
+    public Estado (String nome, Pais pais){
+        setNome(nome);
+        this.pais = pais;
     }
 }
